@@ -51,17 +51,23 @@ Instalación y ejecución
 
 1. Clonar el repositorio
 git clone https://github.com/AdanBarraza/botbi-news.git
+
 cd botbi-news
 2. Instalar Dependecias
+
 npm install
 3. Configurar variables de entorno
+
 Crea un archivo .env con:
 DATABASE_URL="mysql://usuario:password@localhost:3306/newsdb"
 RESEND_API_KEY=tu_api_key
 GEMINI_API_KEY=tu_api_key
+
 4. Migrar la base de datos
+
 npx prisma migrate dev
 5. Ejecutar el proyecto
+
 npm run dev
 
 Luego abre en el navegador:
