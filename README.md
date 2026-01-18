@@ -50,7 +50,7 @@ Antes de comenzar, asegúrate de tener instalado:
 Instalación y ejecución
 
 1. Clonar el repositorio
-git clone https://github.com/tu-usuario/botbi-news.git
+git clone https://github.com/AdanBarraza/botbi-news.git
 cd botbi-news
 2. Instalar Dependecias
 npm install
