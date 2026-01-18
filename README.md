@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Botbi News — Noticias con IA + Newsletter Automatizado
 
-## Getting Started
+Botbi News es una aplicación web que recopila noticias de tecnología y negocios, las procesa con Inteligencia Artificial y muestra un Top 10 diario, además de permitir el envío de newsletters por correo.
 
-First, run the development server:
+El proyecto fue desarrollado como parte de un reto académico, enfocándose en:
+	•	Consumo de APIs
+	•	Automatización
+	•	Uso de IA
+	•	Base de datos
+	•	Frontend moderno
 
-```bash
+⸻
+
+ Funcionalidades principales
+	•	Noticias de Tecnología reescritas con IA
+	•	Noticias de Negocios en formato original
+	•	Sección de Mercados con Top 10 acciones y criptomonedas
+	•	Vista detallada de cada noticia
+	•	Sistema de suscripción por correo
+	•	Envío de Newsletter con Top 10 del día
+	•	Preview web del newsletter
+	•	Base de datos con Prisma + MySQL
+
+⸻
+
+Importante sobre el envío de correos
+
+Por limitaciones de la plataforma de envío (Resend – plan gratuito):
+	• Solo se pueden enviar correos al correo institucional del desarrollador:
+    alu.21130897@correo.itlalaguna.edu.mx
+
+Tecnologías utilizadas
+	•	Frontend: Next.js (App Router) + React
+	•	Backend: API Routes (Node.js)
+	•	Base de datos: MySQL
+	•	ORM: Prisma
+	•	IA: Gemini API
+	•	Correos: Resend
+	•	Estilos: CSS + Tailwind
+	•	Entorno: Node.js
+
+Requisitos para ejecutar el proyecto
+
+Antes de comenzar, asegúrate de tener instalado:
+	•	Node.js 18+
+	•	MySQL
+	•	Git
+
+
+Instalación y ejecución
+
+1. Clonar el repositorio
+git clone https://github.com/tu-usuario/botbi-news.git
+cd botbi-news
+2. Instalar Dependecias
+npm install
+3. Configurar variables de entorno
+Crea un archivo .env con:
+DATABASE_URL="mysql://usuario:password@localhost:3306/newsdb"
+RESEND_API_KEY=tu_api_key
+GEMINI_API_KEY=tu_api_key
+4. Migrar la base de datos
+npx prisma migrate dev
+5. Ejecutar el proyecto
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Luego abre en el navegador:
+http://localhost:3000

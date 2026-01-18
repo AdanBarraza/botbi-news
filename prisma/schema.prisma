@@ -1,0 +1,37 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum Categoria {
+  TECNOLOGIA
+  NEGOCIOS
+}
+
+model Noticia {
+  id               String    @id @default(uuid())
+  urlFuente        String    @unique
+  nombreFuente     String
+  categoria        Categoria
+  titulo           String
+  fechaPublicacion DateTime
+  contenidoOriginal String   @db.LongText
+  contenidoIA      String    @db.LongText
+  puntajeRelevancia Int      @default(0)
+  fechaCreacion    DateTime  @default(now())
+
+  @@map("Noticias")
+}
+
+model Suscriptor {
+  id            String   @id @default(uuid())
+  correo        String   @unique
+  activo        Boolean  @default(true)
+  fechaRegistro DateTime @default(now())
+
+  @@map("Suscriptor")
+}
