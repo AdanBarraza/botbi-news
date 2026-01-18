@@ -9,7 +9,7 @@ El proyecto fue desarrollado como parte de un reto académico, enfocándose en:
 	•	Base de datos
 	•	Frontend moderno
 
-⸻
+
 
  Funcionalidades principales
 	•	Noticias de Tecnología reescritas con IA
@@ -21,7 +21,7 @@ El proyecto fue desarrollado como parte de un reto académico, enfocándose en:
 	•	Preview web del newsletter
 	•	Base de datos con Prisma + MySQL
 
-⸻
+
 
 Importante sobre el envío de correos
 
@@ -49,24 +49,24 @@ Antes de comenzar, asegúrate de tener instalado:
 
 Instalación y ejecución
 
-1. Clonar el repositorio
+1. Clonar el repositorio.
 git clone https://github.com/AdanBarraza/botbi-news.git
 
 cd botbi-news
-2. Instalar Dependecias
+2. Instalar Dependecias.
 
 npm install
-3. Configurar variables de entorno
+3. Configurar variables de entorno.
 
 Crea un archivo .env con:
 DATABASE_URL="mysql://usuario:password@localhost:3306/newsdb"
 RESEND_API_KEY=tu_api_key
 GEMINI_API_KEY=tu_api_key
 
-4. Migrar la base de datos
+4. Migrar la base de datos.
 
 npx prisma migrate dev
-5. Ejecutar el proyecto
+5. Ejecutar el proyecto.
 
 npm run dev
 
